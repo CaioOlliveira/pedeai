@@ -3,8 +3,7 @@ import connection from './database/database.js';
 import Cadastro from './database/Cadastro.js';
 
 connection.authenticate()
-  .then(() => {
-    console.log("conexão com o banco de dados realizada com sucesso!");
+  .then(() => {console.log("conexão com o banco de dados realizada com sucesso!");
     }).catch((error) => {
       console.log("erro ao se conectar com o banco de dados: " + error);
     }
