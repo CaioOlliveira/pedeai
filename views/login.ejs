@@ -1,5 +1,22 @@
 <%- include('partials/header') %>
 <body>
     <%- include('partials/navbar') %>
+    <br>
+    <div class="container">
+        <form method="POST" action="/verificarlogin">
+            <h3>Login</h3>
+            <hr>
+
+            <label>Email</label>
+            <input placeholder="Digite seu email aqui" type="email" name="email" class="form-control">
+            <br>
+
+            <label>Senha</label>
+            <input placeholder="Digite sua senha aqui" type="password" name="senha" class="form-control">
+            <br>
+
+            <button type="submit" class="btn btn-primary">Entrar</button>
+        </form>
+    </div>
 </body>
 <%- include('partials/footer') %>

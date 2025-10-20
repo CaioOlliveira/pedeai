@@ -1,25 +1,33 @@
 import { Sequelize } from "sequelize";
 import connection from "./database.js";
 
-const Cadastro = connection.define('usuarios', {
-    nome: {
+const Pedido = connection.define('pedidos', {
+    titulo: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    email: {
+    CEPloc: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    rua: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    telefone: {
+    numero: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    senha: {
+    bairro:{
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    destino: {
         type: Sequelize.STRING,
         allowNull: false
     }
 });
 
-await Cadastro.sync({force: false}); 
+await Pedido.sync({force: false});
 
-export default Cadastro;
+export default Pedido;

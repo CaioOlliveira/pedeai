@@ -1,0 +1,42 @@
+<%- include('partials/header') %>
+<body>
+    <%-include('partials/navbar') %>
+    <br>
+
+    <div class="container">
+        <form method="POST" action="/salvarpedido">
+            <h3>Faça o seu pedido</h3>
+            <hr>
+
+            <label>Título do pedido</label>
+            <input placeholder="Digite o título do pedido aqui" type="text" name="titulo" class="form-control">
+            <br>
+
+            <label>CEP da sua localização:</label>
+            <input placeholder="Digite seu CEP aqui" type="text" name="cep" class="form-control">
+            <br>
+
+            <label>Rua</label>
+            <input type="text" name="rua" class="form-control">
+            <br>
+
+            <label>Número</label>
+            <input type="text" name="numero" class="form-control">
+            <br>
+
+            <label>Bairro</label>
+            <input type="text" name="bairro" class="form-control">
+            <br>
+
+            <label>Para onde você quer ir</label>
+            <input placeholder="Digite o destino aqui" type="text" name="destino" class="form-control">
+            <br>
+
+            <button type="submit" class="btn btn-primary">Pedir</button>
+            <button href="/pedidos" class="btn btn-secondary">Ver meus pedidos</button>
+            <br>
+            <p></p>
+        </form>
+    </div>
+</body>
+<%- include('partials/footer') %>
