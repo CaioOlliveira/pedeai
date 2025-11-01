@@ -4,16 +4,16 @@
     <br>
 
     <div class="container">
-        <form method="POST" action="/salvarpedido">
+        <form method="POST" action="/salvarservico">
             <h3>Faça o seu pedido</h3>
             <hr>
 
-            <label>Título do pedido</label>
-            <input placeholder="Digite o título do pedido aqui" type="text" name="titulo" class="form-control">
+            <label>Título do serviço</label>
+            <input placeholder="" type="text" name="titulo" class="form-control">
             <br>
 
-            <label>CEP da sua localização:</label>
-            <input placeholder="Digite seu CEP aqui" type="text" name="cep" class="form-control">
+            <label>CEP do local:</label>
+            <input placeholder="" type="text" name="cep" class="form-control">
             <br>
 
             <label>Rua</label>
@@ -28,12 +28,11 @@
             <input type="text" name="bairro" class="form-control">
             <br>
 
-            <label>Para onde você quer ir</label>
-            <input placeholder="Digite o destino aqui" type="text" name="destino" class="form-control">
+            <label>Descrição do serviço</label>
+            <textarea class="form-control" name="descricao"></textarea>
             <br>
 
-            <button type="submit" class="btn btn-primary">Pedir</button>
-            <button href="/pedidos" class="btn btn-secondary">Ver meus pedidos</button>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
             <br>
             <p></p>
         </form>

@@ -4,14 +4,22 @@
 
     <%- include('partials/navbar'); %>
 
-    <div class="container mt-5 text-center">
-        
-        <h1 class="display-4 fw-bold mb-3">Seja bem-vindo ao Pede aí!</h1>
-        
-        <a class="btn btn-primary btn-lg mx-auto" href="/pedir">
-            Pede aí!
-        </a>
-        
-    </div>    
+    <div class="hero-section d-flex align-items-center justify-content-center">
+        <div class="container text-center py-5">
+            <h1 class="display-3 fw-bolder mb-3 hero-title">Seja bem-vindo ao Pega aí!</h1>
+            
+            <p class="lead mb-4 hero-subtitle">Seu novo jeito rápido e fácil de encontrar serviços na sua cidade.<br></p>
+            <p class="lead mb-4 hero-subtitle">Crie uma conta e aproveite!</p>
+            
+            <a class="btn btn-primary btn-xl shadow-lg animate__animated animate__pulse animate__infinite" href="/cadastrar_servico">
+                Cadastrar serviços
+            </a>
+
+            <a class="btn btn-primary btn-xl shadow-lg animate__animated animate__pulse animate__infinite" href="/servicos">
+                Visualizar serviços
+            </a>
+            
+        </div>
+    </div>
 </body>
 <%- include('partials/footer'); %>

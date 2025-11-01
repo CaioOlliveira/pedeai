@@ -1,7 +1,7 @@
 import { Sequelize } from "sequelize";
 import connection from "./database.js";
 
-const Pedido = connection.define('pedidos', {
+const Servico = connection.define('servico', {
     titulo: {
         type: Sequelize.STRING,
         allowNull: false
@@ -22,12 +22,12 @@ const Pedido = connection.define('pedidos', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    destino: {
-        type: Sequelize.STRING,
+    descricao:{
+        type: Sequelize.TEXT,
         allowNull: false
     }
 });
 
-await Pedido.sync({force: false});
+await Servico.sync({force: false});
 
-export default Pedido;
+export default Servico;

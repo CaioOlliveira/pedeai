@@ -1,7 +1,7 @@
 import express from 'express';
 import connection from './database/database.js'; 
 import Cadastro from './database/Cadastro.js';
-import Pedido from './database/Pedido.js';
+import Servico from './database/Servico.js';
 
 connection.authenticate()
     .then(() => {console.log("conexão com o banco de dados realizada com sucesso!");
@@ -28,31 +28,31 @@ app.get("/cadastrar", (req, res) => {
     res.render("cadastrar");
 });
 
-app.get("/pedir", (req, res) => {
-    res.render("pedir");
+app.get("/cadastrar_servico", (req, res) => {
+    res.render("cadastrar_servico");
 });
 
-app.get("/pedidos", (req, res) => {
-    res.render("pedidos");
+app.get("/servicos", (req, res) => {
+    res.render("servicos");
 });
 
-app.post("/salvarpedido", (req, res) => {
+app.post("/salvarservico", (req, res) => {
     let titulo = req.body.titulo;
     let CEPloc = req.body.cep;
     let rua = req.body.rua;
     let numero = req.body.numero;
     let bairro = req.body.bairro;
-    let destino = req.body.destino;
+    let descricao = req.body.descricao;
 
-    Pedido.create({
+    Servico.create({
         titulo: titulo,
         CEPloc: CEPloc,
         rua: rua,
         numero: numero,
         bairro: bairro,
-        destino: destino
+        descricao: descricao
     }).then(() => {
-        res.redirect("/pedidos");
+        res.redirect("/servicos");
     });
 });
 
